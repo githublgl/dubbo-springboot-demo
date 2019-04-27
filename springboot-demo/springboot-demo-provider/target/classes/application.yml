@@ -1,0 +1,19 @@
+#app
+server:
+  port: 8097
+    
+spring:
+  application:
+    name: springboot-demo-provider
+
+dubbo:
+  scan:
+    base-packages: com.springboot.demo.provider.service.impl
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  monitor:
+    protocol: registry
+    

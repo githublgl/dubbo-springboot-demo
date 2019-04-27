@@ -1,0 +1,17 @@
+#app
+server:
+  port: 8099
+    
+spring:
+  application:
+    name: springboot-demo-consumer
+
+dubbo:
+#  application:
+#    name: springboot-demo-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  monitor:
+    protocol: registry
+  scan:
+    base-packages: com.springboot.demo.provider.service
